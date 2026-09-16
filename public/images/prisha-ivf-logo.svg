@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="prishaBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E5D94" />
+      <stop offset="100%" stop-color="#073B61" />
+    </linearGradient>
+    <linearGradient id="prishaPinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F85" />
+      <stop offset="100%" stop-color="#D81B60" />
+    </linearGradient>
+    <linearGradient id="auraGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E83E8C" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0E5D94" stop-opacity="0" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0E5D94" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Logo Mark Group -->
+  <g transform="translate(15, 8)" filter="url(#softShadow)">
+    <!-- Soft decorative background ring -->
+    <circle cx="52" cy="52" r="48" fill="#F0F7FD" />
+    <circle cx="52" cy="52" r="48" stroke="url(#prishaBlueGrad)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4" />
+    
+    <!-- Mother Silhouette (Prisha Blue) -->
+    <!-- Head of Mother -->
+    <circle cx="44" cy="30" r="11" fill="url(#prishaBlueGrad)" />
+    <!-- Mother Body Curve embracing baby -->
+    <path d="M 28 85 C 24 64 34 46 54 44 C 64 43 72 48 76 56 C 72 56 68 59 66 64 C 64 68 64 74 68 78 C 65 83 58 87 46 87 C 38 87 32 86 28 85 Z" fill="url(#prishaBlueGrad)" />
+    <!-- Protective outer arm arch -->
+    <path d="M 32 60 C 26 76 34 94 56 94 C 74 94 88 80 88 62 C 88 52 82 42 74 36 C 74 39 72 44 68 47 C 76 52 80 60 80 68 C 80 80 70 88 56 88 C 42 88 36 76 40 64 Z" fill="url(#prishaBlueGrad)" opacity="0.85" />
+
+    <!-- Baby Silhouette (Prisha Pink / Magenta) -->
+    <!-- Head of Baby -->
+    <circle cx="62" cy="55" r="7.5" fill="url(#prishaPinkGrad)" />
+    <!-- Baby Swaddle & Body curving in mother's arms -->
+    <path d="M 57 65 C 57 61 63 60 67 63 C 71 67 72 73 70 78 C 68 82 62 83 58 80 C 54 77 56 70 57 65 Z" fill="url(#prishaPinkGrad)" />
+    <!-- Small heart accent near baby -->
+    <path d="M 76 36 C 76 33.5 74 32 72 32 C 70.5 32 69.5 33 69 34 C 68.5 33 67.5 32 66 32 C 64 32 62 33.5 62 36 C 62 40 69 44 69 44 C 69 44 76 40 76 36 Z" fill="url(#prishaPinkGrad)" />
+  </g>
+
+  <!-- Typography Group -->
+  <g transform="translate(132, 22)">
+    <!-- PRISHA Text -->
+    <text x="0" y="52" font-family="'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif" font-weight="800" font-size="46" fill="url(#prishaBlueGrad)" letter-spacing="1.5">
+      PRISHA
+    </text>
+
+    <!-- IVF Text with gradient pink -->
+    <text x="206" y="52" font-family="'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif" font-weight="900" font-size="46" fill="url(#prishaPinkGrad)" letter-spacing="2">
+      IVF
+    </text>
+
+    <!-- Subtitle: Center for Advanced Fertility -->
+    <text x="2" y="74" font-family="'Outfit', system-ui, sans-serif" font-weight="600" font-size="11.5" fill="#5B7289" letter-spacing="3.2">
+      FERTILITY &amp; REPRODUCTIVE RESEARCH CENTRE
+    </text>
+
+    <!-- Decorative divider & subtle dot -->
+    <rect x="2" y="81" width="320" height="1.5" fill="#E2E8F0" rx="1" />
+    <rect x="2" y="81" width="48" height="2" fill="url(#prishaPinkGrad)" rx="1" />
+    <circle cx="56" cy="82" r="2" fill="url(#prishaBlueGrad)" />
+  </g>
+</svg>

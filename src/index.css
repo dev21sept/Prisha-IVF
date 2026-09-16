@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --prisha-blue: #0E5D94;
+    --prisha-blue-hover: #0a4975;
+    --prisha-blue-dark: #073453;
+    --prisha-blue-light: #f0f7fd;
+    --prisha-pink: #E83E8C;
+    --prisha-pink-hover: #d32d78;
+    --prisha-pink-dark: #b81b62;
+    --prisha-pink-light: #fdf2f7;
+    --prisha-dark: #0f1e2c;
+    --prisha-navy: #132435;
+    --prisha-text: #334155;
+    --prisha-muted: #64748b;
+    --prisha-border: #e2e8f0;
+    --prisha-white: #ffffff;
+  }
+
+  * {
+    border-color: var(--prisha-border);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: var(--prisha-text);
+    background-color: #f8fbfe;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: var(--prisha-dark);
+  }
+}
+
+/* Custom Healthcare Brand Tokens & Utilities */
+.text-prisha-blue { color: #0E5D94; }
+.bg-prisha-blue { background-color: #0E5D94; }
+.border-prisha-blue { border-color: #0E5D94; }
+
+.text-prisha-pink { color: #E83E8C; }
+.bg-prisha-pink { background-color: #E83E8C; }
+.border-prisha-pink { border-color: #E83E8C; }
+
+.bg-prisha-blue-light { background-color: #f0f7fd; }
+.bg-prisha-pink-light { background-color: #fdf2f7; }
+
+/* Gradients */
+.bg-gradient-prisha {
+  background: linear-gradient(135deg, #0E5D94 0%, #073B61 100%);
+}
+
+.bg-gradient-pink {
+  background: linear-gradient(135deg, #F43F85 0%, #D81B60 100%);
+}
+
+.bg-gradient-subtle {
+  background: linear-gradient(180deg, #F0F7FD 0%, #FFFFFF 100%);
+}
+
+.bg-gradient-hero {
+  background: radial-gradient(circle at 85% 20%, rgba(232, 62, 140, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 15% 60%, rgba(14, 93, 148, 0.09) 0%, transparent 45%),
+              linear-gradient(180deg, #F0F7FD 0%, #FFFFFF 100%);
+}
+
+/* Glassmorphism & Video Overlays */
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-dark {
+  background: rgba(15, 30, 44, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-video-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 30, 44, 0.85) 0%,
+    rgba(14, 93, 148, 0.75) 50%,
+    rgba(232, 62, 140, 0.55) 100%
+  );
+}
+
+/* Clean, subtle cinematic overlay that lets the actual clinical video shine through naturally */
+.hero-video-overlay-clean {
+  background:
+    /* Gentle horizontal gradient: darker on left for text legibility, crystal clear on right where video plays */
+    linear-gradient(
+      90deg,
+      rgba(7, 24, 43, 0.68) 0%,
+      rgba(7, 24, 43, 0.42) 45%,
+      rgba(7, 24, 43, 0.12) 80%,
+      rgba(7, 24, 43, 0.05) 100%
+    ),
+    /* Soft vertical vignette: blends transparent navbar at top & smooth transition at bottom */
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      transparent 25%,
+      transparent 75%,
+      rgba(7, 24, 43, 0.70) 100%
+    );
+}
+
+.hero-video-overlay-dark {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 24, 43, 0.68) 0%,
+      rgba(7, 24, 43, 0.42) 45%,
+      rgba(7, 24, 43, 0.12) 80%,
+      rgba(7, 24, 43, 0.05) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      transparent 25%,
+      transparent 75%,
+      rgba(7, 24, 43, 0.70) 100%
+    );
+}
+
+.fertiora-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fertiora-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(14, 93, 148, 0.12), 0 8px 16px -8px rgba(232, 62, 140, 0.08);
+}
+
+/* Badges */
+.badge-blue {
+  background-color: #e6f2fb;
+  color: #0E5D94;
+  border: 1px solid #c2e0f7;
+}
+
+.badge-pink {
+  background-color: #fdeaf2;
+  color: #E83E8C;
+  border: 1px solid #f9c2db;
+}
+
+/* Subtle Floating Animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-float-reverse {
+  animation: floatReverse 4.5s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+.animate-glow {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Smooth Slide-In Animation */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Button Shimmer */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 4s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
