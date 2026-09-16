@@ -124,9 +124,17 @@ export const HomePage = () => {
       <section className="relative min-h-[720px] lg:min-h-[820px] flex items-center overflow-hidden" onMouseEnter={() => setIsSliderPaused(true)} onMouseLeave={() => setIsSliderPaused(false)}>
         {/* Continuous Background Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-          <video ref={videoRef} autoPlay loop muted={isVideoMuted} playsInline className="w-full h-full object-cover scale-105 filter brightness-100" poster="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1600&q=80">
-            <source src="/videos/hero-video.mp4" type="video/mp4"/>
-            <source src={homepage.heroVideoUrl} type="video/mp4"/>
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted={isVideoMuted}
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover scale-105 filter brightness-100"
+            poster="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1600&q=80"
+          >
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
           </video>
 
           {/* Clean, Non-muddy Cinematic Overlay that lets video shine brightly */}

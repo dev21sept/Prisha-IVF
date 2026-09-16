@@ -25,6 +25,7 @@
     "vite": "^8.3.0"
   },
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^20",
